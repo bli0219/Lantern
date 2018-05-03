@@ -54,11 +54,16 @@ public class MapManager : MonoBehaviour {
 
 
     public void DestroyRocks(List<string> names) {
-        Debug.Log("length " + names.Count);
         foreach (string name in names) {
             if (rocks[name] != null) {
                 rocks[name].SetActive(false);
             }
+        }
+    }
+
+    public void DestroyRocks(string name) {
+        if (rocks[name] != null) {
+            rocks[name].SetActive(false);
         }
     }
 
